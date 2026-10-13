@@ -1,0 +1,19 @@
+_subdirectory: template
+_templates_suffix: .jinja
+_envops:
+    keep_trailing_newline: true
+    lstrip_blocks: true
+    trim_blocks: true
+_exclude:
+    - ".git"
+
+name:
+    type: str
+    help: Project/package name
+    placeholder: my-project
+    default: "{{ _copier_conf.dst_path.name | default('project', true) }}"
+
+description:
+    type: str
+    help: Short project description
+    default: ""
