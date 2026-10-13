@@ -13,7 +13,22 @@ name:
     placeholder: my-project
     default: "{{ _copier_conf.dst_path.name | default('project', true) }}"
 
+module:
+    type: str
+    help: Python import name (`src/<module>/`)
+    placeholder: my_project
+
 description:
     type: str
     help: Short project description
     default: ""
+
+min_python:
+    type: str
+    help: Minimum Python version
+    default: "3.11"
+    choices: |-
+        - "3.11"
+        - "3.12"
+        - "3.13"
+        - "3.14"
