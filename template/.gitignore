@@ -1,0 +1,55 @@
+# Python
+*.py[cd]
+__pycache__/
+
+# Build
+*.egg-info/
+build/
+dist/
+
+# Environment
+.env
+.env.*
+.uv/
+.venv/
+!.env.example
+
+# Test
+.coverage
+.coverage.*
+.hypothesis/
+.pytest_cache/
+coverage.json
+coverage.xml
+htmlcov/
+junit.xml
+pytestdebug.log
+
+# Lint
+.mypy_cache/
+.pyright/
+.ruff_cache/
+.ty_cache/
+
+# Notebook
+.ipynb_checkpoints/
+.ipython/
+.jupyter/
+
+# Docs
+*.doctree
+.cache/
+_build/
+doctrees/
+site/
+
+# Profiling
+*.lprof
+*.prof
+*.pstats
+*.speedscope.json
+callgrind.out.*
+flamegraph.svg
+perf.data*
+profile.html
+profile.json
