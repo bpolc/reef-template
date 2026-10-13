@@ -32,3 +32,12 @@ min_python:
         - "3.12"
         - "3.13"
         - "3.14"
+
+line_width:
+    type: int
+    help: Maximum line width for formatters
+    default: 100
+    validator: |-
+        {% if line_width < 40 or line_width > 320 %}
+        Line width must be between 40 and 320
+        {% endif %}

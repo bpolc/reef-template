@@ -69,8 +69,26 @@ priority = "normalize"
 
 [[repos.hooks]]
 id = "trailing-whitespace"
+exclude_types = ["json", "markdown", "toml", "yaml"]
 priority = "autofix"
 
 [[repos.hooks]]
 id = "end-of-file-fixer"
+exclude_types = ["json", "markdown", "toml", "yaml"]
 priority = "format"
+
+# LOCAL HOOKS #
+# 📄 https://prek.j178.dev/reference/local-hooks/
+
+[[repos]]
+repo = "local"
+
+[[repos.hooks]]
+id = "dprint-fmt"
+name = "format files (dprint)"
+entry = "uv run --no-sync dprint fmt --fail-on-change"
+language = "system"
+types_or = ["json", "markdown", "toml", "yaml"]
+# dprint runs in parallel
+require_serial = true
+priority = "autofix"

@@ -1,0 +1,30 @@
+{
+  "lineWidth": {{ line_width }},
+  "indentWidth": 4,
+  "newLineKind": "lf",
+  "useTabs": false,
+  "plugins": [
+    "https://plugins.dprint.dev/g-plane/pretty_yaml-v0.6.0.wasm",
+    "https://plugins.dprint.dev/json-0.25.2.wasm",
+    "https://plugins.dprint.dev/markdown-0.26.0.wasm",
+    "https://plugins.dprint.dev/toml-0.9.0.wasm"
+  ],
+  "json": { // 📄 https://dprint.dev/plugins/json/config/
+    "indentWidth": 2,
+  },
+  "markdown": { // 📄 https://dprint.dev/plugins/markdown/config/
+  },
+  "toml": { // 📄 https://dprint.dev/plugins/toml/config/
+  },
+  "yaml": { // 📄 https://dprint.dev/plugins/pretty_yaml/config/
+    "printWidth": {{ line_width }},
+    "formatComments": true,
+    "ignoreCommentDirective": "dprint-ignore"
+  },
+  "excludes": [
+    "**/.git",
+    "**/.venv",
+    "**/uv.lock",
+    "{{ _copier_conf.answers_file }}"
+  ]
+}
