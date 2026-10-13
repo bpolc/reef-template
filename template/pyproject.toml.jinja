@@ -8,6 +8,14 @@ description = "{{ description }}"
 readme = "README.md"
 requires-python = ">={{ min_python }}"
 
+[dependency-groups]
+dev = [
+    { include-group = "lint" },
+]
+lint = [
+    "prek>=0.5.5",
+]
+
 [build-system]
 requires = ["uv_build>=0.12.23,<0.13"]
 build-backend = "uv_build"
