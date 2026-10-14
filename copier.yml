@@ -23,6 +23,16 @@ description:
     help: Short project description
     default: ""
 
+author_name:
+    type: str
+    help: Author name
+    default: ""
+
+author_email:
+    type: str
+    help: Author email
+    default: ""
+
 python_versions:
     type: yaml
     help: Supported Python versions, oldest first

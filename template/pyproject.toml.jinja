@@ -5,6 +5,11 @@ name = "{{ name }}"
 import-names = ["{{ module }}"]
 version = "0.1.0"
 description = "{{ description }}"
+{% if author_name or author_email %}
+authors = [
+    { {% if author_name %}name = "{{ author_name }}"{% if author_email %}, {% endif %}{% endif %}{% if author_email %}email = "{{ author_email }}"{% endif %} },
+]
+{% endif %}
 readme = "README.md"
 requires-python = ">={{ min_python }}"
 classifiers = [
