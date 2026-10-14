@@ -6,6 +6,7 @@ default_install_hook_types = [
 ]
 default_stages = [
     "pre-commit",
+    "manual",
 ]
 
 [priorities]
@@ -92,3 +93,19 @@ types_or = ["json", "markdown", "toml", "yaml"]
 # dprint runs in parallel
 require_serial = true
 priority = "autofix"
+
+# EXTERNAL HOOKS #
+# 📄 https://prek.j178.dev/configuration/?h=add+and#add-and-configure-hooks
+
+[[repos]]
+repo = "https://github.com/gitleaks/gitleaks"
+rev = "v8.30.1"
+
+[[repos.hooks]]
+id = "gitleaks"
+name = "detect hardcoded secrets (gitleaks)"
+entry = "gitleaks git --redact --verbose"
+pass_filenames = false
+always_run = true
+stages = ["manual"]
+priority = "early"
