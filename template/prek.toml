@@ -11,6 +11,10 @@ default_stages = [
     "manual",
 ]
 
+[update]
+cooldown_days = 7
+freeze = true
+
 [priorities]
 early = 0 # Read-only checks and long-running scans
 normalize = 10 # Content normalization
