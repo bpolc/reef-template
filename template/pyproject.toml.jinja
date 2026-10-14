@@ -7,6 +7,12 @@ version = "0.1.0"
 description = "{{ description }}"
 readme = "README.md"
 requires-python = ">={{ min_python }}"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    {% for version in python_versions[python_versions.index(min_python):] %}
+    "Programming Language :: Python :: {{ version }}",
+    {% endfor %}
+]
 
 [dependency-groups]
 dev = [

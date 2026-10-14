@@ -23,15 +23,21 @@ description:
     help: Short project description
     default: ""
 
-min_python:
-    type: str
-    help: Minimum Python version
-    default: "3.11"
-    choices: |-
+python_versions:
+    type: yaml
+    help: Supported Python versions, oldest first
+    when: false
+    default:
         - "3.11"
         - "3.12"
         - "3.13"
         - "3.14"
+
+min_python:
+    type: str
+    help: Minimum Python version
+    default: "{{ python_versions[0] }}"
+    choices: "{{ python_versions | tojson }}"
 
 line_width:
     type: int
