@@ -22,12 +22,63 @@ classifiers = [
 [dependency-groups]
 dev = [
     { include-group = "lint" },
+    { include-group = "test" },
 ]
 lint = [
     "dprint-py>=0.63.0",
     "prek>=0.5.5",
 ]
+test = [
+    "pytest>=9.0",
+    "pytest-cov>=7",
+    "pytest-randomly>=5",
+    "pytest-timeout>=2.4",
+    "pytest-xdist>=3.8",
+]
 
 [build-system]
 requires = ["uv_build>=0.12.23,<0.13"]
 build-backend = "uv_build"
+
+# TEST #
+
+# 📄 https://docs.pytest.org/en/latest/reference/reference.html#configuration-options
+[tool.pytest]
+minversion = "9.0"
+addopts = [
+    "-ra", # summary of all non-passed tests
+    "--import-mode=importlib",
+]
+strict = true
+# Test timeout (sec), override with: @pytest.mark.timeout(n)
+timeout = 60
+testpaths = ["tests"]
+filterwarnings = [
+    "error::DeprecationWarning",
+    "error::FutureWarning",
+    "error::PendingDeprecationWarning",
+]
+
+# 📄 https://coverage.readthedocs.io/en/latest/config.html#run
+[tool.coverage.run]
+branch = true
+source = ["src"]
+
+# 📄 https://coverage.readthedocs.io/en/latest/config.html#report
+[tool.coverage.report]
+show_missing = true
+skip_covered = true
+# To exclude code from line/branch coverage, use:
+#   # pragma: no cover
+#   # pragma: no branch
+exclude_also = [
+    '(typing\.)?assert_never\(',
+    '@(typing\.)?overload',
+    '@(abc\.)?abstractmethod',
+    'class .*\bProtocol\):',
+    'def __repr__\b',
+    'if __name__ == .__main__.:',
+    'if 0:',
+    'raise AssertionError\b',
+    'raise NotImplementedError\b',
+]

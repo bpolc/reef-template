@@ -1,0 +1,9 @@
+from importlib.metadata import version
+
+import {{ module }} as package
+
+
+def test_version() -> None:
+    expected = version({{ name | tojson }})
+    got = package.__version__
+    assert got == expected
