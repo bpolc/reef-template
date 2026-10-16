@@ -35,7 +35,6 @@ author_email:
 
 python_versions:
     type: yaml
-    help: Supported Python versions, oldest first
     when: false
     default:
         - "3.11"
