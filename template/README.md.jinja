@@ -5,9 +5,13 @@
 
 {% endif %}
 
-## Setup
-
+{% if task_runner == "just" %}
+```bash
+just setup
+```
+{% else %}
 ```bash
 uv sync
 uv run prek prepare-hooks
 ```
+{% endif %}

@@ -48,6 +48,14 @@ min_python:
     default: "{{ python_versions[0] }}"
     choices: "{{ python_versions | tojson }}"
 
+task_runner:
+    type: str
+    help: Task runner
+    default: none
+    choices:
+        - none
+        - just
+
 line_width:
     type: int
     help: Maximum line width for formatters

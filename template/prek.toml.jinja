@@ -90,6 +90,17 @@ priority = "format"
 [[repos]]
 repo = "local"
 
+{% if task_runner == 'just' %}
+[[repos.hooks]]
+id = "just-fmt"
+name = "format justfile"
+entry = "just --fmt --check"
+language = "system"
+files = { glob = ["justfile"] }
+pass_filenames = false
+priority = "autofix"
+
+{% endif %}
 [[repos.hooks]]
 id = "dprint-fmt"
 name = "format files (dprint)"

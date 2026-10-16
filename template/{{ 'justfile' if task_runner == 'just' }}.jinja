@@ -1,0 +1,68 @@
+# 📄 https://just.systems/man/en/recipes.html
+
+set minimum-version := '1.58.0'
+set default-list := true
+
+# Install dependencies and Git hooks
+[group('setup')]
+setup:
+    uv sync
+    uv run prek prepare-hooks
+
+# Run all repository hooks
+[group('quality')]
+hooks *args:
+    uv run prek run --all-files {{ '{{ args }}' }}
+
+# Format project files
+[group('quality')]
+format:
+    just --fmt
+    uv run dprint fmt .
+    uv run ruff format src tests
+
+# Lint Python code
+[group('quality')]
+lint *args:
+    uv run ruff check src tests {{ '{{ args }}' }}
+
+# Type-check Python code
+[group('quality')]
+typecheck:
+    uv run basedpyright
+
+# Run all required checks
+[group('quality')]
+check:
+    just lint
+    just typecheck
+    just test
+
+# Run tests
+[group('testing')]
+test *args:
+    uv run pytest {{ '{{ args }}' }}
+
+# Run tests with branch coverage
+[group('testing')]
+coverage *args:
+    @just test \
+        --cov \
+        --cov-context=test \
+        --cov-report=term \
+        --cov-report=html \
+        {{ '{{ args }}' }}
+
+# Remove generated files and caches (preserve virtual environment)
+[group('maintenance')]
+clean:
+    git clean -fdX \
+        -e '!*' \
+        -e '.coverage.*' \
+        -e '.coverage' \
+        -e '.pytest_cache/' \
+        -e '.ruff_cache/' \
+        -e 'dist/' \
+        -e 'htmlcov/' \
+        -e '**/__pycache__/' \
+        -e '!.venv/**'
