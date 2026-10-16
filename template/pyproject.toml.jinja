@@ -50,6 +50,7 @@ minversion = "9.0"
 addopts = [
     "-ra", # summary of all non-passed tests
     "--import-mode=importlib",
+    "-n4", # number of workers (processes)
 ]
 strict = true
 # Test timeout (sec), override with: @pytest.mark.timeout(n)
