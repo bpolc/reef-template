@@ -1,0 +1,23 @@
+#!/bin/sh
+set -eu
+
+hook_type="$1"
+shift
+
+# Normalize Git's Windows drive path before adding it to the shell's PATH
+root="$(cd "$(git rev-parse --show-toplevel)" && pwd)"
+
+# Add both POSIX and Windows venv directories to PATH
+PATH="$root/.venv/bin:$root/.venv/Scripts:$PATH"
+export PATH
+
+if ! prek="$(PATH="$root/.venv/bin:$root/.venv/Scripts" command -v prek)"; then
+    echo "error: prek not found in .venv" >&2
+    echo "run: uv sync" >&2
+    exit 1
+fi
+
+exec "$prek" hook-impl \
+    --hook-type "$hook_type" \
+    --skip-on-missing-config \
+    -- "$@"

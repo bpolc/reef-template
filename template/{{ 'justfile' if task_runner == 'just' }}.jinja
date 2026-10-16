@@ -7,6 +7,8 @@ set default-list := true
 [group('setup')]
 setup:
     uv sync
+    git add --chmod=+x -- .githooks
+    git config --local core.hooksPath .githooks
     uv run prek prepare-hooks
 
 # Run all repository hooks
