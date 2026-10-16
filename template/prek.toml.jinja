@@ -90,6 +90,16 @@ priority = "format"
 [[repos]]
 repo = "local"
 
+[[repos.hooks]]
+id = "basedpyright"
+name = "type-check python files (basedpyright)"
+entry = "basedpyright"
+language = "system"
+files = { glob = ["**/*.py", "**/*.pyi", "pyproject.toml"] }
+pass_filenames = false
+stages = ["pre-push", "manual"]
+priority = "early"
+
 {% if task_runner == 'just' %}
 [[repos.hooks]]
 id = "just-fmt"
@@ -102,6 +112,14 @@ priority = "autofix"
 
 {% endif %}
 [[repos.hooks]]
+id = "ruff-check"
+name = "lint python files (ruff)"
+entry = "ruff check --fix --force-exclude"
+language = "system"
+types_or = ["jupyter", "python", "pyi"]
+priority = "autofix"
+
+[[repos.hooks]]
 id = "dprint-fmt"
 name = "format files (dprint)"
 entry = "dprint fmt --fail-on-change"
@@ -110,6 +128,14 @@ types_or = ["json", "markdown", "toml", "yaml"]
 # dprint runs in parallel
 require_serial = true
 priority = "autofix"
+
+[[repos.hooks]]
+id = "ruff-format"
+name = "format python and markdown files (ruff)"
+entry = "ruff format --force-exclude"
+language = "system"
+types_or = ["jupyter", "markdown", "python", "pyi"]
+priority = "format"
 
 # EXTERNAL HOOKS #
 # 📄 https://prek.j178.dev/configuration/?h=add+and#add-and-configure-hooks
