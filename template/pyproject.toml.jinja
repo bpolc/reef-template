@@ -27,6 +27,7 @@ dev = [
 lint = [
     "dprint-py>=0.63.0",
     "prek>=0.5.5",
+    "ruff>=0.16.5",
 ]
 test = [
     "pytest>=9.0",
@@ -82,3 +83,31 @@ exclude_also = [
     'raise AssertionError\b',
     'raise NotImplementedError\b',
 ]
+
+# LINT + FORMAT #
+
+# 📄 https://docs.astral.sh/ruff/settings/#top-level
+[tool.ruff]
+line-length = {{ line_width }}
+
+# 📄 https://docs.astral.sh/ruff/settings/#lint
+[tool.ruff.lint]
+preview = true
+select = [
+    "correctness",
+    "suspicious",
+    "complexity",
+    "performance",
+    "style",
+]
+
+[tool.ruff.lint.per-file-ignores]
+# Many rules are already adapted for notebook cells
+"**/*.ipynb" = [
+    "T20", # print/pprint
+]
+
+# 📄 https://docs.astral.sh/ruff/settings/#format
+[tool.ruff.format]
+docstring-code-format = true
+line-ending = "lf"
