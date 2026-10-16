@@ -25,6 +25,7 @@ dev = [
     { include-group = "test" },
 ]
 lint = [
+    "basedpyright>=1.40",
     "dprint-py>=0.63.0",
     "prek>=0.5.5",
     "ruff>=0.16.5",
@@ -84,6 +85,45 @@ exclude_also = [
     'raise NotImplementedError\b',
 ]
 
+# TYPE CHECK #
+
+# 📄 https://docs.basedpyright.com/latest/configuration/config-files/
+[tool.basedpyright]
+include = ["src", "tests"]
+pythonVersion = "{{ min_python }}"
+typeCheckingMode = "recommended"
+allowedUntypedLibraries = []
+
+# Allow `Any`
+reportAny = "hint"
+reportExplicitAny = "hint"
+
+# 📄 https://docs.basedpyright.com/latest/configuration/config-files/#execution-environment-options
+[[tool.basedpyright.executionEnvironments]]
+root = "tests"
+extraPaths = ["."]
+
+# Some tests intentionally make invalid calls/accesses
+reportArgumentType = "hint"
+reportAttributeAccessIssue = "hint"
+reportCallIssue = "hint"
+reportOptionalCall = "hint"
+reportOptionalMemberAccess = "hint"
+
+# Tests may access internals
+reportPrivateImportUsage = false
+reportPrivateUsage = false
+
+# Fixtures and mocks are often dynamic
+reportUnknownArgumentType = false
+reportUnknownLambdaType = false
+reportUnknownMemberType = false
+reportUnknownVariableType = false
+
+# Common test patterns
+reportUnusedCallResult = false
+reportUnusedClass = false
+
 # LINT + FORMAT #
 
 # 📄 https://docs.astral.sh/ruff/settings/#top-level
@@ -99,6 +139,27 @@ select = [
     "complexity",
     "performance",
     "style",
+]
+# Rules with BasedPyright equivalents (that Ruff can't safely autofix)
+ignore = [
+    "ANN001", # reportMissingParameterType
+    "ANN002", # reportMissingParameterType
+    "ANN003", # reportMissingParameterType
+    "ARG001", # reportUnusedParameter
+    "ARG002", # reportUnusedParameter
+    "ARG003", # reportUnusedParameter
+    "ARG004", # reportUnusedParameter
+    "ARG005", # reportUnusedParameter
+    "B015", # reportUnusedExpression
+    "B018", # reportUnusedExpression
+    "F631", # reportAssertAlwaysTrue
+    "F821", # reportUndefinedVariable
+    "F822", # reportUnsupportedDunderAll
+    "N804", # reportSelfClsParameterName
+    "N805", # reportSelfClsParameterName
+    "PLE0604", # reportUnsupportedDunderAll
+    "PLE0605", # reportUnsupportedDunderAll
+    "PYI056", # reportUnsupportedDunderAll
 ]
 
 [tool.ruff.lint.per-file-ignores]
