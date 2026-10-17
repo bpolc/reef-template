@@ -3,6 +3,9 @@
     "dprint.dprint",
     "ms-python.python",
     "redhat.vscode-yaml",
+    {% if task_runner == 'just' %}
+    "skellock.just",
+    {% endif %}
     "tamasfe.even-better-toml",
   ]
 }
