@@ -22,6 +22,26 @@
     "**/{.cache,_build,doctrees,site}/**": true
   },
 
+  // Python
+  "python.testing.autoTestDiscoverOnSaveEnabled": true,
+  "python.testing.pytestArgs": [
+    "tests"
+  ],
+  "python.testing.pytestEnabled": true,
+  "python.testing.unittestEnabled": false,
+  // Use tools from the virtual environment
+  "basedpyright.importStrategy": "fromEnvironment",
+  "ruff.importStrategy": "fromEnvironment",
+  // Disable the Python extension's language server in favor of basedpyright
+  "python.languageServer": "None",
+
+  // Notebooks
+  "notebook.formatOnSave.enabled": true,
+  "notebook.codeActionsOnSave": {
+    "notebook.source.fixAll": "explicit",
+    "notebook.source.organizeImports": "explicit"
+  },
+
   // Language-specific
   "[json]": {
     "editor.defaultFormatter": "dprint.dprint"
@@ -32,6 +52,9 @@
   "[markdown]": {
     "editor.defaultFormatter": "dprint.dprint",
     "editor.wordWrap": "wordWrapColumn"
+  },
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff"
   },
   "[toml]": {
     "editor.defaultFormatter": "dprint.dprint"
