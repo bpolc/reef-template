@@ -151,5 +151,5 @@ name = "detect hardcoded secrets (gitleaks)"
 entry = "gitleaks git --redact --verbose"
 pass_filenames = false
 always_run = true
-stages = ["manual"]
+stages = ["pre-push", "manual"]
 priority = "early"
