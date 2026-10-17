@@ -51,6 +51,10 @@ addopts = [
     "-ra", # summary of all non-passed tests
     "--import-mode=importlib",
     "-n4", # number of workers (processes)
+    "--ignore-glob=**/htmlcov",
+    "--ignore-glob=**/_build",
+    "--ignore-glob=**/doctrees",
+    "--ignore-glob=**/site",
 ]
 strict = true
 # Test timeout (sec), override with: @pytest.mark.timeout(n)
@@ -91,6 +95,15 @@ exclude_also = [
 # 📄 https://docs.basedpyright.com/latest/configuration/config-files/
 [tool.basedpyright]
 include = ["src", "tests"]
+# Hidden directories, __pycache__, and virtual environments are excluded by default.
+exclude = [
+    "**/build",
+    "**/dist",
+    "**/htmlcov",
+    "**/_build",
+    "**/doctrees",
+    "**/site",
+]
 pythonVersion = "{{ min_python }}"
 typeCheckingMode = "recommended"
 allowedUntypedLibraries = []

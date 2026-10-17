@@ -10,13 +10,16 @@
   "files.trimFinalNewlines": true,
 
   // Excludes
+  "explorer.excludeGitIgnore": true,
+  // The file watcher needs explicit exclusions
   "files.watcherExclude": {
     "**/__pycache__/**": true,
-    "**/.venv/**": true
-  },
-  "search.exclude": {
-    "**/__pycache__": true,
-    "**/.venv": true
+    "**/{build,dist}/**": true,
+    "**/{.uv,.venv}/**": true,
+    "**/{.hypothesis,.pytest_cache,htmlcov}/**": true,
+    "**/{.mypy_cache,.pyright,.ruff_cache,.ty_cache}/**": true,
+    "**/{.ipynb_checkpoints,.ipython,.jupyter}/**": true,
+    "**/{.cache,_build,doctrees,site}/**": true
   },
 
   // Language-specific
