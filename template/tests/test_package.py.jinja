@@ -4,6 +4,7 @@ import {{ module }} as package
 
 
 def test_version() -> None:
+    """Dummy test so pytest has at least one check in a new project."""
     expected = version({{ name | tojson }})
     got = package.__version__
     assert got == expected
