@@ -9,11 +9,19 @@ name:
     help: Project/package name
     placeholder: my-project
     default: "{{ _copier_conf.dst_path.name | default('project', true) }}"
+    validator: >-
+        {% if not (name | regex_search('^[A-Za-z0-9](?:[A-Za-z0-9._-]*[A-Za-z0-9])?\Z')) %}
+        Must be a valid Python package name (ASCII)
+        {% endif %}
 
 module:
     type: str
     help: Python import name (`src/<module>/`)
     placeholder: my_project
+    validator: >-
+        {% if not (module | regex_search('^[A-Za-z_][A-Za-z0-9_]*\Z')) %}
+        Must be a valid Python identifier (ASCII)
+        {% endif %}
 
 description:
     type: str
