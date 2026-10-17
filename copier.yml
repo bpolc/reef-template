@@ -1,11 +1,8 @@
 _subdirectory: template
-_templates_suffix: .jinja
+_min_copier_version: "8.1.0"
 _envops:
-    keep_trailing_newline: true
     lstrip_blocks: true
     trim_blocks: true
-_exclude:
-    - ".git"
 
 name:
     type: str
