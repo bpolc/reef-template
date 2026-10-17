@@ -14,7 +14,7 @@ setup:
 # Run all repository hooks
 [group('quality')]
 hooks *args:
-    uv run prek run --all-files {{ '{{ args }}' }}
+    uv run prek run --all-files --hook-stage manual {{ '{{ args }}' }}
 
 # Format project files
 [group('quality')]
