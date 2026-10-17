@@ -1,5 +1,5 @@
 _subdirectory: template
-_min_copier_version: "8.1.0"
+_min_copier_version: "9.19.1"
 _envops:
     lstrip_blocks: true
     trim_blocks: true
