@@ -28,6 +28,6 @@
   "excludes": [
     "**/.git",
     "**/uv.lock",
-    "{{ _copier_conf.answers_file }}"
+    {{ _copier_conf.answers_file.as_posix() | tojson }}
   ]
 }
