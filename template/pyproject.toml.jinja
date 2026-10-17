@@ -42,6 +42,10 @@ test = [
 requires = ["uv_build>=0.13.1,<0.14"]
 build-backend = "uv_build"
 
+# 📄 https://docs.astral.sh/uv/concepts/build-backend/#configuration
+[tool.uv.build-backend]
+module-name = {{ module | tojson }}
+
 # TEST #
 
 # 📄 https://docs.pytest.org/en/latest/reference/reference.html#configuration-options
