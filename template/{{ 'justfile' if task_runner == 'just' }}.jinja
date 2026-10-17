@@ -7,8 +7,7 @@ set default-list := true
 [group('setup')]
 setup:
     uv sync
-    git config --local core.hooksPath .githooks
-    uv run prek prepare-hooks
+    uv run --no-sync prek install --prepare-hooks
 
 # Run all repository hooks
 [group('quality')]

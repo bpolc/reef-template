@@ -4,6 +4,7 @@ minimum_prek_version = "0.4.11"
 default_install_hook_types = [
     "pre-commit",
     "pre-merge-commit",
+    "pre-push",
 ]
 default_stages = [
     "pre-commit",
@@ -93,7 +94,7 @@ repo = "local"
 [[repos.hooks]]
 id = "basedpyright"
 name = "type-check python files (basedpyright)"
-entry = "basedpyright"
+entry = "uv run --no-sync basedpyright"
 language = "system"
 files = { glob = ["**/*.py", "**/*.pyi", "pyproject.toml"] }
 pass_filenames = false
@@ -114,7 +115,7 @@ priority = "autofix"
 [[repos.hooks]]
 id = "ruff-check"
 name = "lint python files (ruff)"
-entry = "ruff check --fix --force-exclude"
+entry = "uv run --no-sync ruff check --fix --force-exclude"
 language = "system"
 types_or = ["jupyter", "python", "pyi"]
 priority = "autofix"
@@ -122,7 +123,7 @@ priority = "autofix"
 [[repos.hooks]]
 id = "dprint-fmt"
 name = "format files (dprint)"
-entry = "dprint fmt --fail-on-change"
+entry = "uv run --no-sync dprint fmt --fail-on-change"
 language = "system"
 types_or = ["json", "markdown", "toml", "yaml"]
 # dprint runs in parallel
@@ -132,7 +133,7 @@ priority = "autofix"
 [[repos.hooks]]
 id = "ruff-format"
 name = "format python and markdown files (ruff)"
-entry = "ruff format --force-exclude"
+entry = "uv run --no-sync ruff format --force-exclude"
 language = "system"
 types_or = ["jupyter", "markdown", "python", "pyi"]
 priority = "format"
