@@ -123,7 +123,7 @@ priority = "autofix"
 [[repos.hooks]]
 id = "dprint-fmt"
 name = "format files (dprint)"
-entry = "uv run --no-sync dprint fmt --fail-on-change"
+entry = "uv run --no-sync dprint fmt --fail-on-change --allow-no-files"
 language = "system"
 types_or = ["json", "jsonc", "markdown", "toml", "yaml"]
 # dprint runs in parallel
