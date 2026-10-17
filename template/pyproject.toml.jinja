@@ -1,13 +1,13 @@
 # 📄 https://packaging.python.org/en/latest/guides/writing-pyproject-toml/
 
 [project]
-name = "{{ name }}"
-import-names = ["{{ module }}"]
+name = {{ name | tojson }}
+import-names = [{{ module | tojson }}]
 version = "0.1.0"
-description = "{{ description }}"
+description = {{ description | tojson }}
 {% if author_name or author_email %}
 authors = [
-    { {% if author_name %}name = "{{ author_name }}"{% if author_email %}, {% endif %}{% endif %}{% if author_email %}email = "{{ author_email }}"{% endif %} },
+    { {% if author_name %}name = {{ author_name | tojson }}{% if author_email %}, {% endif %}{% endif %}{% if author_email %}email = {{ author_email | tojson }}{% endif %} },
 ]
 {% endif %}
 readme = "README.md"
