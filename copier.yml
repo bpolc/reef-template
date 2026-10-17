@@ -18,8 +18,10 @@ module:
     help: Python import name (`src/<module>/`)
     placeholder: my_project
     validator: >-
-        {% if not (module | regex_search('^[A-Za-z_][A-Za-z0-9_]*\Z')) %}
-        Must be a valid Python identifier (ASCII)
+        {% if not (module | regex_search('^[a-z_][a-z0-9_]*\Z')) %}
+        Must be a lowercase Python identifier (ASCII)
+        {% elif module | regex_search('(?i)^(?:con|prn|aux|nul|com[0-9]|lpt[0-9])\Z') %}
+        Must not be a reserved Windows device name
         {% endif %}
 
 description:
