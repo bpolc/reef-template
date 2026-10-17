@@ -20,7 +20,7 @@ hooks *args:
 format:
     just --fmt
     uv run dprint fmt .
-    uv run ruff format src tests
+    uv run ruff format --force-exclude
 
 # Lint Python code
 [group('quality')]
