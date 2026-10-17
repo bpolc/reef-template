@@ -12,7 +12,6 @@ just setup
 {% else %}
 ```bash
 uv sync
-git add --chmod=+x -- .githooks
 git config --local core.hooksPath .githooks
 uv run prek prepare-hooks
 ```
