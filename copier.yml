@@ -7,7 +7,6 @@ _envops:
 name:
     type: str
     help: Project/package name
-    placeholder: my-project
     default: "{{ _copier_conf.dst_path.name | default('project', true) }}"
     validator: >-
         {% if not (name | regex_search('^[A-Za-z0-9](?:[A-Za-z0-9._-]*[A-Za-z0-9])?\Z')) %}
