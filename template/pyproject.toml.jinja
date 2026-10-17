@@ -158,8 +158,10 @@ select = [
     "performance",
     "style",
 ]
+
+[tool.ruff.lint.per-file-ignores]
 # Rules with BasedPyright equivalents (that Ruff can't safely autofix)
-ignore = [
+"{src,tests}/**/*.{py,pyi}" = [
     "ANN001", # reportMissingParameterType
     "ANN002", # reportMissingParameterType
     "ANN003", # reportMissingParameterType
@@ -180,7 +182,6 @@ ignore = [
     "PYI056", # reportUnsupportedDunderAll
 ]
 
-[tool.ruff.lint.per-file-ignores]
 # Many rules are already adapted for notebook cells
 "**/*.ipynb" = [
     "T20", # print/pprint
