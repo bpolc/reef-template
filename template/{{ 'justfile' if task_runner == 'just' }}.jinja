@@ -34,6 +34,9 @@ typecheck:
 # Run all required checks
 [group('quality')]
 check:
+    just --fmt --check
+    uv run dprint fmt --fail-on-change .
+    uv run ruff format --check --force-exclude
     just lint
     just typecheck
     just test
