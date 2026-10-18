@@ -1,10 +1,9 @@
-from importlib.metadata import version
+import importlib.metadata
 
-import {{ module }} as package
+from {{ module }} import __version__
 
 
 def test_version() -> None:
     """Dummy test so pytest has at least one check in a new project."""
-    expected = version({{ name | tojson }})
-    got = package.__version__
-    assert got == expected
+    expected = importlib.metadata.version({{ name | tojson }})
+    assert expected == __version__
