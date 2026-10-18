@@ -3,14 +3,14 @@
 __pycache__/
 
 # Build
-build/
-dist/
+/build/
+/dist/
 
 # Environment
 .env
 .env.*
-.uv/
-.venv/
+/.uv/
+/.venv/
 !.env.example
 
 # Test
@@ -20,7 +20,7 @@ dist/
 .pytest_cache/
 coverage.json
 coverage.xml
-htmlcov/
+/htmlcov/
 junit.xml
 pytestdebug.log
 

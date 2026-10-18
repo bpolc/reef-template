@@ -71,12 +71,12 @@ clean:
         -e '.pytest_cache/' \
         -e '.ruff_cache/' \
         -e '.ty_cache/' \
-        -e '.uv/' \
+        -e '/.uv/' \
         -e '_build/' \
-        -e 'build/' \
-        -e 'dist/' \
+        -e '/build/' \
+        -e '/dist/' \
         -e 'doctrees/' \
-        -e 'htmlcov/' \
+        -e '/htmlcov/' \
         -e 'site/' \
         -e '**/__pycache__/' \
-        -e '!.venv/**'
+        -e '!/.venv/**'
