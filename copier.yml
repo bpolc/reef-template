@@ -31,14 +31,16 @@ module:
         Must be a lowercase Python identifier (ASCII)
         {% elif module in python_keywords %}
         Must not be a Python keyword
+        {% elif module | regex_search('^__.+__\\Z') %}
+        Must not be a __dunder__ name
         {% elif module in ['sitecustomize', 'usercustomize'] %}
         Must not be a Python startup hook
         {% elif module in stdlib_module_names %}
         Must not be a Python standard-library module
-        {% elif module | regex_search('^__.+__\\Z') %}
-        Must not be a __dunder__ name
         {% elif module | regex_search('(?i)^(?:con|prn|aux|nul|com[1-9]|lpt[1-9])\\Z') %}
         Must not be a reserved Windows device name
+        {% elif module == 'tests' %}
+        Must not use the reserved directory name "tests"
         {% elif not _copier_conf.overwrite and module | lower in pypi_import_names %}
         Must not be a popular PyPI import name
         {% endif %}
