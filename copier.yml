@@ -35,7 +35,7 @@ module:
         Must not be a Python startup hook
         {% elif module in stdlib_module_names %}
         Must not be a Python standard-library module
-        {% elif module | regex_search('^__[A-Za-z]+(?:_[A-Za-z]+)*__\\Z') %}
+        {% elif module | regex_search('^__.+__\\Z') %}
         Must not be a __dunder__ name
         {% elif module | regex_search('(?i)^(?:con|prn|aux|nul|com[1-9]|lpt[1-9])\\Z') %}
         Must not be a reserved Windows device name
