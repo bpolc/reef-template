@@ -97,6 +97,7 @@ name = "type-check python files (basedpyright)"
 entry = "uv run --no-sync basedpyright"
 language = "system"
 files = { glob = ["**/*.py", "**/*.pyi", "pyproject.toml"] }
+include_deleted = true
 pass_filenames = false
 stages = ["pre-push", "manual"]
 priority = "early"
