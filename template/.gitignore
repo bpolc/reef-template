@@ -36,11 +36,11 @@ pytestdebug.log
 .jupyter/
 
 # Docs
-*.doctree
-.cache/
-_build/
-doctrees/
-site/
+/_build/
+/.cache/
+/docs/_build/
+/docs/build/
+/site/
 
 # Profiling
 *.lprof

@@ -56,9 +56,6 @@ addopts = [
     "--import-mode=importlib",
     "-n4", # number of workers (processes)
     "--ignore-glob=**/htmlcov",
-    "--ignore-glob=**/_build",
-    "--ignore-glob=**/doctrees",
-    "--ignore-glob=**/site",
 ]
 strict = true
 # Test timeout (sec), override with: @pytest.mark.timeout(n)
@@ -101,12 +98,13 @@ exclude_also = [
 include = ["src", "tests"]
 # Hidden directories, __pycache__, and virtual environments are excluded by default.
 exclude = [
-    "**/build",
-    "**/dist",
-    "**/htmlcov",
-    "**/_build",
-    "**/doctrees",
-    "**/site",
+    "_build",
+    "build",
+    "dist",
+    "docs/_build",
+    "docs/build",
+    "htmlcov",
+    "site",
 ]
 pythonVersion = "{{ min_python }}"
 typeCheckingMode = "recommended"

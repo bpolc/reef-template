@@ -62,21 +62,22 @@ coverage *args:
 clean:
     git clean -fdX \
         -e '!*' \
-        -e '.cache/' \
-        -e '.coverage.*' \
         -e '.coverage' \
+        -e '.coverage.*' \
         -e '.hypothesis/' \
         -e '.mypy_cache/' \
         -e '.pyright/' \
         -e '.pytest_cache/' \
         -e '.ruff_cache/' \
         -e '.ty_cache/' \
+        -e '/.cache/' \
         -e '/.uv/' \
-        -e '_build/' \
+        -e '/_build/' \
         -e '/build/' \
         -e '/dist/' \
-        -e 'doctrees/' \
+        -e '/docs/_build/' \
+        -e '/docs/build/' \
         -e '/htmlcov/' \
-        -e 'site/' \
+        -e '/site/' \
         -e '**/__pycache__/' \
         -e '!/.venv/**'
