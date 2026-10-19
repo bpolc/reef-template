@@ -1,3 +1,12 @@
+!include includes/pypi_import_names.yml
+---
+!include includes/python_keywords.yml
+---
+!include includes/python_versions.yml
+---
+!include includes/stdlib_module_names.yml
+---
+
 _subdirectory: template
 _min_copier_version: "9.19.1"
 _envops:
@@ -18,10 +27,20 @@ module:
     help: Python import name (`src/<module>/`)
     placeholder: my_project
     validator: >-
-        {% if not (module | regex_search('^[a-z_][a-z0-9_]*\Z')) %}
+        {% if not (module | regex_search('^[a-z_][a-z0-9_]*\\Z')) %}
         Must be a lowercase Python identifier (ASCII)
-        {% elif module | regex_search('(?i)^(?:con|prn|aux|nul|com[0-9]|lpt[0-9])\Z') %}
+        {% elif module in python_keywords %}
+        Must not be a Python keyword
+        {% elif module in ['sitecustomize', 'usercustomize'] %}
+        Must not be a Python startup hook
+        {% elif module in stdlib_module_names %}
+        Must not be a Python standard-library module
+        {% elif module | regex_search('^__[A-Za-z]+(?:_[A-Za-z]+)*__\\Z') %}
+        Must not be a __dunder__ name
+        {% elif module | regex_search('(?i)^(?:con|prn|aux|nul|com[1-9]|lpt[1-9])\\Z') %}
         Must not be a reserved Windows device name
+        {% elif not _copier_conf.overwrite and module | lower in pypi_import_names %}
+        Must not be a popular PyPI import name
         {% endif %}
 
 description:
@@ -42,15 +61,6 @@ author_email:
     type: str
     help: Author email
     default: ""
-
-python_versions:
-    type: yaml
-    when: false
-    default:
-        - "3.11"
-        - "3.12"
-        - "3.13"
-        - "3.14"
 
 min_python:
     type: str
