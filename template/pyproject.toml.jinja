@@ -13,10 +13,12 @@ authors = [
 readme = "README.md"
 requires-python = ">={{ min_python }}"
 classifiers = [
+    "Operating System :: OS Independent",
     "Programming Language :: Python :: 3",
     {% for version in python_versions[python_versions.index(min_python):] %}
     "Programming Language :: Python :: {{ version }}",
     {% endfor %}
+    "Typing :: Typed",
 ]
 
 [dependency-groups]
