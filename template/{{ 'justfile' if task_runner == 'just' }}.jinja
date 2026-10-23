@@ -27,6 +27,17 @@ format:
 lint *args:
     uv run ruff check src tests "$@"
 
+# List enabled Ruff rules for a file or directory
+[group('quality')]
+[script]
+ruff-rules path='.':
+    settings="$(uv run ruff check --show-settings "$1")"
+    printf '%s\n' "$settings" | awk '
+        /^linter.rules.enabled = \[$/ { rules = 1; next }
+        rules && /^\]/ { exit }
+        rules { sub(/^[[:space:]]+/, ""); sub(/,$/, ""); print }
+    '
+
 # Type-check Python code
 [group('quality')]
 typecheck:
