@@ -92,6 +92,17 @@ priority = "format"
 repo = "local"
 
 [[repos.hooks]]
+id = "uv-lock-check"
+name = "check lockfile freshness (uv)"
+entry = "uv lock --check"
+language = "system"
+files = { glob = ["pyproject.toml", "uv.lock", "uv.toml"] }
+include_deleted = true
+pass_filenames = false
+stages = ["pre-commit", "pre-merge-commit", "pre-push", "manual"]
+priority = "early"
+
+[[repos.hooks]]
 id = "basedpyright"
 name = "type-check python files (basedpyright)"
 entry = "uv run --no-sync basedpyright"
