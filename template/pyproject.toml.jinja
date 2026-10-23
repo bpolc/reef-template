@@ -11,9 +11,16 @@ authors = [
 ]
 {% endif %}
 readme = "README.md"
+{% if licenses %}
+license = {{ licenses | sort | join(' OR ') | tojson }}
+license-files = ["LICENSE-*"]
+{% endif %}
 requires-python = ">={{ min_python }}"
 classifiers = [
     "Operating System :: OS Independent",
+    {% if not licenses %}
+    "Private :: Do Not Upload",
+    {% endif %}
     "Programming Language :: Python :: 3",
     {% for version in python_versions[python_versions.index(min_python):] %}
     "Programming Language :: Python :: {{ version }}",

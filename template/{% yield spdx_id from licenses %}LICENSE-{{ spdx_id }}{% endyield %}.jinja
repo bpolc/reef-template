@@ -1,0 +1,4 @@
+{% set current_year = '%Y' | strftime %}
+{% set license_author_display = author_name %}
+{% set license_text_id = spdx_id | regex_replace('-(only|or-later)$', '') %}
+{% include 'includes/license-texts/' ~ license_text_id ~ '.txt' %}

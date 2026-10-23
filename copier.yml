@@ -64,6 +64,35 @@ author_email:
     help: Author email
     default: ""
 
+licenses:
+    type: str
+    help: Project license(s)
+    multiselect: true
+    default: []
+    choices:
+        - 0BSD
+        - AGPL-3.0-only
+        - AGPL-3.0-or-later
+        - Apache-2.0
+        - Artistic-2.0
+        - BSD-2-Clause
+        - BSD-3-Clause
+        - BSL-1.0
+        - GPL-2.0-only
+        - GPL-2.0-or-later
+        - GPL-3.0-only
+        - GPL-3.0-or-later
+        - ISC
+        - LGPL-2.1-only
+        - LGPL-2.1-or-later
+        - LGPL-3.0-only
+        - LGPL-3.0-or-later
+        - MIT
+        - MPL-2.0
+        - PSF-2.0
+        - Unlicense
+        - Zlib
+
 min_python:
     type: str
     help: Minimum Python version
