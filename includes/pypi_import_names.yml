@@ -1,1031 +1,1033 @@
 pypi_import_names:
-    type: yaml
+    type: json
     when: false
     default: |
-        - "_argon2_cffi_bindings"
-        - "_awscrt"
-        - "_black_version"
-        - "_brotli"
-        - "_cffi_backend"
-        - "_distutils_hack"
-        - "_duckdb"
-        - "_hypothesis_ftz_detector"
-        - "_hypothesis_globals"
-        - "_hypothesis_pytestplugin"
-        - "_jpype"
-        - "_multiprocess"
-        - "_mysql_connector"
-        - "_pillow_heif"
-        - "_plotly_utils"
-        - "_polars_runtime_32"
-        - "_pyrsistent_version"
-        - "_pytest"
-        - "_ruamel_yaml"
-        - "_sounddevice"
-        - "_sounddevice_data"
-        - "_soundfile"
-        - "_soundfile_data"
-        - "_time_machine"
-        - "_watchdog_fsevents"
-        - "_win32sysloader"
-        - "_win32verstamp_pywin32ctypes"
-        - "_winxptheme"
-        - "_yaml"
-        - "absl"
-        - "accelerate"
-        - "acp"
-        - "adal"
-        - "adbc_driver_duckdb"
-        - "adodbapi"
-        - "aenum"
-        - "afxres"
-        - "agate"
-        - "agentplatform"
-        - "aioboto3"
-        - "aiobotocore"
-        - "aiodns"
-        - "aiofile"
-        - "aiofiles"
-        - "aiohappyeyeballs"
-        - "aiohttp"
-        - "aiohttp_retry"
-        - "aioitertools"
-        - "aiosignal"
-        - "aiosqlite"
-        - "airflow"
-        - "alabaster"
-        - "alembic"
-        - "altair"
-        - "amazon"
-        - "amqp"
-        - "annotated_doc"
-        - "annotated_types"
-        - "anthropic"
-        - "antlr4"
-        - "anyio"
-        - "apiclient"
-        - "appdirs"
-        - "apscheduler"
-        - "argcomplete"
-        - "argon2"
-        - "arrow"
-        - "asgiref"
-        - "asn1crypto"
-        - "ast_serialize"
-        - "astroid"
-        - "asttokens"
-        - "async_lru"
-        - "async_timeout"
-        - "asyncpg"
-        - "attr"
-        - "attrs"
-        - "authlib"
-        - "av"
-        - "aws_cdk"
-        - "aws_lambda_powertools"
-        - "aws_requests_auth"
-        - "aws_xray_sdk"
-        - "awscli"
-        - "awscrt"
-        - "awswrangler"
-        - "azure"
-        - "babel"
-        - "backoff"
-        - "backports"
-        - "bandit"
-        - "basedpyright"
-        - "bcrypt"
-        - "beartype"
-        - "bidict"
-        - "billiard"
-        - "bitarray"
-        - "black"
-        - "blackd"
-        - "blake3"
-        - "bleach"
-        - "blib2to3"
-        - "blinker"
-        - "blis"
-        - "boltons"
-        - "boolean"
-        - "boto3"
-        - "botocore"
-        - "bracex"
-        - "brotli"
-        - "bs4"
-        - "bson"
-        - "build"
-        - "bytecode"
-        - "c787785866c7b801238d__mypyc"
-        - "cachecontrol"
-        - "cached_property"
-        - "cachetools"
-        - "caio"
-        - "catalogue"
-        - "cattr"
-        - "cattrs"
-        - "cbor2"
-        - "cchardet"
-        - "celery"
-        - "certifi"
-        - "cffi"
-        - "cfgv"
-        - "chardet"
-        - "charset_normalizer"
-        - "claude_agent_sdk"
-        - "cleo"
-        - "click"
-        - "click_didyoumean"
-        - "click_option_group"
-        - "click_plugins"
-        - "click_repl"
-        - "clickhouse_connect"
-        - "cloudpathlib"
-        - "cloudpickle"
-        - "cobble"
-        - "colorama"
-        - "coloredlogs"
-        - "colorlog"
-        - "colors"
-        - "comm"
-        - "commctrl"
-        - "confection"
-        - "configargparse"
-        - "confluent_kafka"
-        - "contourpy"
-        - "corsheaders"
-        - "coverage"
-        - "cpuinfo"
-        - "cramjam"
-        - "crashtest"
-        - "crc32c"
-        - "cron_descriptor"
-        - "croniter"
-        - "crypto"
-        - "cryptodome"
-        - "cryptography"
-        - "cssselect"
-        - "cssselect2"
-        - "ctrf"
-        - "cuda"
-        - "curl_cffi"
-        - "cv2"
-        - "cycler"
-        - "cyclonedx"
-        - "cyclopts"
-        - "cymem"
-        - "cython"
-        - "dacite"
-        - "daff"
-        - "dask"
-        - "dask_expr"
-        - "databricks"
-        - "dataclasses_json"
-        - "datadog"
-        - "datadog_api_client"
-        - "datamodel_code_generator"
-        - "datasets"
-        - "dateparser"
-        - "dateparser_cli"
-        - "dateparser_data"
-        - "dateparser_scripts"
-        - "dateutil"
-        - "db_dtypes"
-        - "dbt"
-        - "dbt_common"
-        - "dbt_extractor"
-        - "dbtlabs"
-        - "dde"
-        - "ddtrace"
-        - "debugpy"
-        - "decorator"
-        - "deepdiff"
-        - "defusedxml"
-        - "delta"
-        - "demos"
-        - "deprecated"
-        - "deprecation"
-        - "deptry"
-        - "dev"
-        - "diff_cover"
-        - "dill"
-        - "diskcache"
-        - "distlib"
-        - "distro"
-        - "distutils"
-        - "django"
-        - "django_filters"
-        - "dns"
-        - "docker"
-        - "docopt"
-        - "docstring_parser"
-        - "docutils"
-        - "docx"
-        - "dotenv"
-        - "duckdb"
-        - "dulwich"
-        - "dunamai"
-        - "durationpy"
-        - "ecdsa"
-        - "editables"
-        - "einops"
-        - "elastic_transport"
-        - "elasticsearch"
-        - "email_validator"
-        - "emoji"
-        - "engineio"
-        - "entrypoints"
-        - "envier"
-        - "et_xmlfile"
-        - "eval_type_backport"
-        - "events"
-        - "example"
-        - "examples"
-        - "exceptiongroup"
-        - "execnet"
-        - "executing"
-        - "face"
-        - "factory"
-        - "faker"
-        - "fakeredis"
-        - "fastapi"
-        - "fastapi_cli"
-        - "fastapi_cloud_cli"
-        - "fastar"
-        - "fastavro"
-        - "fastcore"
-        - "fastjsonschema"
-        - "fastmcp"
-        - "fastspec"
-        - "fastuuid"
-        - "fb303"
-        - "fd7dcdb10166ebd4db98__mypyc"
-        - "feedparser"
-        - "filelock"
-        - "filetype"
-        - "findpython"
-        - "fire"
-        - "firebase_admin"
-        - "fitz"
-        - "flake8"
-        - "flask"
-        - "flask_cors"
-        - "flask_login"
-        - "flatbuffers"
-        - "flit_core"
-        - "fonttools"
-        - "fpdf"
-        - "fqdn"
-        - "freezegun"
-        - "frozendict"
-        - "frozenlist"
-        - "fsspec"
-        - "ftfy"
-        - "functorch"
-        - "future"
-        - "gcsfs"
-        - "genai_prices"
-        - "genson"
-        - "geopandas"
-        - "gevent"
-        - "ghapi"
-        - "git"
-        - "gitdb"
-        - "github"
-        - "glom"
-        - "google"
-        - "google_auth_httplib2"
-        - "google_auth_oauthlib"
-        - "google_crc32c"
-        - "googleapiclient"
-        - "gql"
-        - "graphene"
-        - "graphql"
-        - "graphql_relay"
-        - "graphviz"
-        - "great_expectations"
-        - "greenlet"
-        - "gremlin_python"
-        - "gridfs"
-        - "griffe"
-        - "grimp"
-        - "groq"
-        - "grpc"
-        - "grpc_health"
-        - "grpc_interceptor"
-        - "grpc_status"
-        - "grpc_tools"
-        - "grpclib"
-        - "gspread"
-        - "gunicorn"
-        - "h11"
-        - "h2"
-        - "h3"
-        - "h5py"
-        - "hatch_vcs"
-        - "hatchling"
-        - "hf_xet"
-        - "hiredis"
-        - "hive_metastore"
-        - "holidays"
-        - "hpack"
-        - "html2text"
-        - "html5lib"
-        - "httpcore"
-        - "httpcore2"
-        - "httplib2"
-        - "httptools"
-        - "httpx"
-        - "httpx2"
-        - "httpx_sse"
-        - "huey"
-        - "huggingface_hub"
-        - "humanfriendly"
-        - "humanize"
-        - "hvac"
-        - "hyperframe"
-        - "hyperlink"
-        - "hypothesis"
-        - "id"
-        - "identify"
-        - "idna"
-        - "ijson"
-        - "imageio"
-        - "imageio_ffmpeg"
-        - "imagesize"
-        - "immutabledict"
-        - "importlib_metadata"
-        - "importlib_resources"
-        - "importlinter"
-        - "include"
-        - "incremental"
-        - "inflect"
-        - "inflection"
-        - "iniconfig"
-        - "inquirerpy"
-        - "installer"
-        - "invoke"
-        - "ipdb"
-        - "ipykernel"
-        - "ipykernel_launcher"
-        - "ipython"
-        - "ipython_pygments_lexers"
-        - "ipywidgets"
-        - "isapi"
-        - "isodate"
-        - "isoduration"
-        - "isort"
-        - "isympy"
-        - "itsdangerous"
-        - "jaraco"
-        - "jedi"
-        - "jeepney"
-        - "jinja2"
-        - "jira"
-        - "jiter"
-        - "jmespath"
-        - "joblib"
-        - "jose"
-        - "joserfc"
-        - "jpype"
-        - "json5"
-        - "json_repair"
-        - "jsonconversion"
-        - "jsonlines"
-        - "jsonpatch"
-        - "jsonpatch_cli"
-        - "jsonpath"
-        - "jsonpath_ng"
-        - "jsonpickle"
-        - "jsonpointer"
-        - "jsonref"
-        - "jsonschema"
-        - "jsonschema_path"
-        - "jsonschema_specifications"
-        - "jupyter"
-        - "jupyter_builder"
-        - "jupyter_client"
-        - "jupyter_core"
-        - "jupyter_events"
-        - "jupyter_lsp"
-        - "jupyter_server"
-        - "jupyter_server_terminals"
-        - "jupyterlab"
-        - "jupyterlab_pygments"
-        - "jupyterlab_server"
-        - "jupyterlab_widgets"
-        - "jwcrypto"
-        - "jwt"
-        - "kafka"
-        - "key_value"
-        - "keyring"
-        - "kiwisolver"
-        - "kombu"
-        - "kubernetes"
-        - "langchain"
-        - "langchain_anthropic"
-        - "langchain_classic"
-        - "langchain_community"
-        - "langchain_core"
-        - "langchain_google_genai"
-        - "langchain_google_vertexai"
-        - "langchain_openai"
-        - "langchain_protocol"
-        - "langchain_text_splitters"
-        - "langcodes"
-        - "langfuse"
-        - "langgraph"
-        - "langgraph_sdk"
-        - "langsmith"
-        - "lark"
-        - "lazy_loader"
-        - "lazy_object_proxy"
-        - "ldap3"
-        - "leather"
-        - "levenshtein"
-        - "lib"
-        - "lib64"
-        - "libcst"
-        - "libfuturize"
-        - "libpasteurize"
-        - "librt"
-        - "libs"
-        - "license_expression"
-        - "licensing"
-        - "lightgbm"
-        - "limits"
-        - "linkify_it"
-        - "litellm"
-        - "llvmlite"
-        - "locket"
-        - "lockfile"
-        - "logfire_api"
-        - "loguru"
-        - "lupa"
-        - "lxml"
-        - "lxml_html_clean"
-        - "lz4"
-        - "magic"
-        - "magika"
-        - "makefun"
-        - "mako"
-        - "mammoth"
-        - "markdown"
-        - "markdown_it"
-        - "markdownify"
-        - "markitdown"
-        - "markupsafe"
-        - "marshmallow"
-        - "mashumaro"
-        - "matplotlib"
-        - "matplotlib_inline"
-        - "maturin"
-        - "maxminddb"
-        - "mccabe"
-        - "mcp"
-        - "mcp_types"
-        - "mdit_py_plugins"
-        - "mdurl"
-        - "mergedeep"
-        - "mistralai"
-        - "mistune"
-        - "ml_dtypes"
-        - "mlflow"
-        - "mmapfile"
-        - "mmh3"
-        - "mmsystem"
-        - "mock"
-        - "modal"
-        - "modal_docs"
-        - "modal_proto"
-        - "modal_version"
-        - "more_itertools"
-        - "moto"
-        - "mpl_toolkits"
-        - "mpmath"
-        - "msal"
-        - "msal_extensions"
-        - "msgpack"
-        - "msgspec"
-        - "msrest"
-        - "msrestazure"
-        - "multidict"
-        - "multipart"
-        - "multiprocess"
-        - "multitasking"
-        - "murmurhash"
-        - "mypy"
-        - "mypy_boto3_s3"
-        - "mypy_extensions"
-        - "mypyc"
-        - "mysql"
-        - "mysqldb"
-        - "nacl"
-        - "narwhals"
-        - "natsort"
-        - "nbclient"
-        - "nbconvert"
-        - "nbformat"
-        - "nest_asyncio"
-        - "nest_asyncio2"
-        - "netbios"
-        - "networkx"
-        - "nexusrpc"
-        - "nh3"
-        - "ninja"
-        - "nltk"
-        - "nodeenv"
-        - "nodejs_wheel"
-        - "notebook"
-        - "notebook_shim"
-        - "ntsecuritycon"
-        - "numba"
-        - "numpy"
-        - "nvidia"
-        - "oauth2client"
-        - "oauthlib"
-        - "odbc"
-        - "olefile"
-        - "olefileio_pl"
-        - "omegaconf"
-        - "onnxruntime"
-        - "openai"
-        - "openapi_pydantic"
-        - "openapi_schema_validator"
-        - "openapi_spec_validator"
-        - "openpyxl"
-        - "opensearchpy"
-        - "openssl"
-        - "opentelemetry"
-        - "opt_einsum"
-        - "optuna"
-        - "oracledb"
-        - "ordered_set"
-        - "orderly_set"
-        - "orjson"
-        - "ormsgpack"
-        - "oscrypto"
-        - "oss2"
-        - "outcome"
-        - "overrides"
-        - "packageurl"
-        - "packaging"
-        - "packaging_legacy_version"
-        - "pandas"
-        - "pandas_gbq"
-        - "pandocfilters"
-        - "papermill"
-        - "paramiko"
-        - "parse"
-        - "parsedatetime"
-        - "parso"
-        - "partd"
-        - "passlib"
-        - "past"
-        - "pasta"
-        - "pathable"
-        - "pathlib_abc"
-        - "pathspec"
-        - "pathvalidate"
-        - "patsy"
-        - "pbr"
-        - "pbs_installer"
-        - "pdf2image"
-        - "pdfminer"
-        - "pdfplumber"
-        - "peewee"
-        - "pendulum"
-        - "perfmon"
-        - "pexpect"
-        - "pfzy"
-        - "pg8000"
-        - "pgvector"
-        - "phonenumbers"
-        - "pil"
-        - "pillow_heif"
-        - "pip"
-        - "pip_api"
-        - "pip_audit"
-        - "pip_requirements_parser"
-        - "pkginfo"
-        - "platformdirs"
-        - "playhouse"
-        - "playwright"
-        - "plotly"
-        - "pluggy"
-        - "ply"
-        - "poetry"
-        - "poetry_plugin_export"
-        - "polars"
-        - "portalocker"
-        - "postgrest"
-        - "posthog"
-        - "pptx"
-        - "pre_commit"
-        - "prek"
-        - "preshed"
-        - "prettytable"
-        - "progressbar"
-        - "prometheus_client"
-        - "prompt_toolkit"
-        - "propcache"
-        - "proto"
-        - "proxytypes"
-        - "psutil"
-        - "psycopg"
-        - "psycopg2"
-        - "psycopg_binary"
-        - "psycopg_pool"
-        - "ptr"
-        - "ptyprocess"
-        - "pure_eval"
-        - "puremagic"
-        - "pvectorc"
-        - "pwiz"
-        - "py"
-        - "py4j"
-        - "py_partiql_parser"
-        - "py_serializable"
-        - "pyarrow"
-        - "pyarrow_hotfix"
-        - "pyasn1"
-        - "pyasn1_modules"
-        - "pyathena"
-        - "pybase64"
-        - "pybind11"
-        - "pybreaker"
-        - "pycares"
-        - "pycodestyle"
-        - "pycountry"
-        - "pycparser"
-        - "pydantic"
-        - "pydantic_ai"
-        - "pydantic_core"
-        - "pydantic_extra_types"
-        - "pydantic_graph"
-        - "pydantic_settings"
-        - "pydata_google_auth"
-        - "pydeck"
-        - "pydot"
-        - "pydub"
-        - "pydyf"
-        - "pyee"
-        - "pyflakes"
-        - "pygments"
-        - "pyiceberg"
-        - "pylab"
-        - "pylint"
-        - "pymdownx"
-        - "pymongo"
-        - "pymssql"
-        - "pymupdf"
-        - "pymupdf4llm"
-        - "pymysql"
-        - "pynvml"
-        - "pyodbc"
-        - "pyotp"
-        - "pyparsing"
-        - "pypdf"
-        - "pypdf2"
-        - "pypdfium2"
-        - "pypdfium2_cfg"
-        - "pypdfium2_cli"
-        - "pypdfium2_raw"
-        - "pyperclip"
-        - "pyphen"
-        - "pyproj"
-        - "pyproject_hooks"
-        - "pyright"
-        - "pyroaring"
-        - "pyrsistent"
-        - "pyspark"
-        - "pytesseract"
-        - "pytest"
-        - "pytest_asyncio"
-        - "pytest_cov"
-        - "pytest_django"
-        - "pytest_env"
-        - "pytest_html"
-        - "pytest_httpx"
-        - "pytest_metadata"
-        - "pytest_mock"
-        - "pytest_randomly"
-        - "pytest_rerunfailures"
-        - "pytest_split"
-        - "pytest_timeout"
-        - "python_discovery"
-        - "python_http_client"
-        - "python_multipart"
-        - "python_utils"
-        - "pythoncom"
-        - "pythonjsonlogger"
-        - "pythonwin"
-        - "pytimeparse"
-        - "pytokens"
-        - "pytz"
-        - "pywin"
-        - "pywin32_bootstrap"
-        - "pywin32_system32"
-        - "pywin32_testutil"
-        - "pywintypes"
-        - "pywt"
-        - "pyximport"
-        - "qrcode"
-        - "questionary"
-        - "rapidfuzz"
-        - "rasutil"
-        - "ratelimit"
-        - "re2"
-        - "readme_renderer"
-        - "realtime"
-        - "redis"
-        - "redshift_connector"
-        - "referencing"
-        - "regcheck"
-        - "regex"
-        - "regutil"
-        - "reportlab"
-        - "requests"
-        - "requests_aws4auth"
-        - "requests_file"
-        - "requests_mock"
-        - "requests_oauthlib"
-        - "requests_toolbelt"
-        - "requirements"
-        - "resolvelib"
-        - "responses"
-        - "respx"
-        - "rest_framework"
-        - "retry"
-        - "retrying"
-        - "rfc3339_validator"
-        - "rfc3986"
-        - "rfc3986_validator"
-        - "rfc3987_syntax"
-        - "rich"
-        - "rich_argparse"
-        - "rich_click"
-        - "rich_rst"
-        - "rich_toolkit"
-        - "rignore"
-        - "rpds"
-        - "rsa"
-        - "ruamel"
-        - "ruff"
-        - "s3fs"
-        - "s3transfer"
-        - "safetensors"
-        - "schema"
-        - "scipy"
-        - "scramp"
-        - "scripts"
-        - "seaborn"
-        - "secretstorage"
-        - "selenium"
-        - "semantic_version"
-        - "semdep"
-        - "semgrep"
-        - "semver"
-        - "send2trash"
-        - "sendgrid"
-        - "sentence_transformers"
-        - "sentencepiece"
-        - "sentry_sdk"
-        - "service_identity"
-        - "servicemanager"
-        - "setproctitle"
-        - "setuptools"
-        - "setuptools_scm"
-        - "shapely"
-        - "shellingham"
-        - "shortuuid"
-        - "simple_salesforce"
-        - "simple_websocket"
-        - "simplejson"
-        - "six"
-        - "skimage"
-        - "sklearn"
-        - "skops"
-        - "slack"
-        - "slack_sdk"
-        - "slowapi"
-        - "slugify"
-        - "smart_open"
-        - "smmap"
-        - "sniffio"
-        - "snowballstemmer"
-        - "snowflake"
-        - "snowplow_tracker"
-        - "socketio"
-        - "socks"
-        - "sockshandler"
-        - "socksio"
-        - "sortedcontainers"
-        - "sounddevice"
-        - "soundfile"
-        - "soupsieve"
-        - "spacy"
-        - "spacy_legacy"
-        - "spacy_loggers"
-        - "sphinx"
-        - "sphinxcontrib"
-        - "spnego"
-        - "sqlalchemy"
-        - "sqlalchemy_utils"
-        - "sqlglot"
-        - "sqlmodel"
-        - "sqlparse"
-        - "srsly"
-        - "sse_starlette"
-        - "sshtunnel"
-        - "sspi"
-        - "sspicon"
-        - "stack_data"
-        - "starlette"
-        - "statsmodels"
-        - "stevedore"
-        - "storage3"
-        - "strands"
-        - "streamlit"
-        - "strenum"
-        - "strictyaml"
-        - "stripe"
-        - "structlog"
-        - "supabase"
-        - "supabase_auth"
-        - "supabase_functions"
-        - "swebench"
-        - "swifter"
-        - "sympy"
-        - "synchronicity"
-        - "tabulate"
-        - "tblib"
-        - "temporalio"
-        - "tenacity"
-        - "tensorboard"
-        - "termcolor"
-        - "terminado"
-        - "test"
-        - "testcontainers"
-        - "text_unidecode"
-        - "texttable"
-        - "textual"
-        - "thinc"
-        - "threadpoolctl"
-        - "thrift"
-        - "tifffile"
-        - "tiktoken"
-        - "tiktoken_ext"
-        - "time_machine"
-        - "timer"
-        - "tinycss2"
-        - "tinyhtml5"
-        - "tld"
-        - "tldextract"
-        - "tlz"
-        - "tokenizers"
-        - "toml"
-        - "tomli"
-        - "tomli_w"
-        - "tomlkit"
-        - "tools"
-        - "toolz"
-        - "torch"
-        - "torchgen"
-        - "torchvision"
-        - "tornado"
-        - "tox"
-        - "tqdm"
-        - "traitlets"
-        - "transformers"
-        - "tree_sitter"
-        - "tree_sitter_languages"
-        - "trino"
-        - "trio"
-        - "trio_websocket"
-        - "triton"
-        - "trove_classifiers"
-        - "truststore"
-        - "twilio"
-        - "twine"
-        - "twisted"
-        - "ty"
-        - "typedload"
-        - "typeguard"
-        - "typer"
-        - "typing_extensions"
-        - "typing_inspect"
-        - "typing_inspection"
-        - "tzdata"
-        - "tzlocal"
-        - "ua_parser"
-        - "ua_parser_builtins"
-        - "uc_micro"
-        - "ujson"
-        - "uncalled_for"
-        - "unidecode"
-        - "unidiff"
-        - "upath"
-        - "uri_template"
-        - "uritemplate"
-        - "urllib3"
-        - "uuid_utils"
-        - "uv"
-        - "uv_build"
-        - "uvicorn"
-        - "uvloop"
-        - "validators"
-        - "vcr"
-        - "vcs_versioning"
-        - "vertex_ray"
-        - "vertexai"
-        - "vine"
-        - "virtualenv"
-        - "vulture"
-        - "wandb"
-        - "wasabi"
-        - "watchdog"
-        - "watchfiles"
-        - "watchtower"
-        - "wcmatch"
-        - "wcwidth"
-        - "weasel"
-        - "weasyprint"
-        - "webcolors"
-        - "webencodings"
-        - "websocket"
-        - "websockets"
-        - "werkzeug"
-        - "wheel"
-        - "whitenoise"
-        - "widgetsnbextension"
-        - "win2kras"
-        - "win32"
-        - "win32api"
-        - "win32clipboard"
-        - "win32com"
-        - "win32comext"
-        - "win32con"
-        - "win32console"
-        - "win32cred"
-        - "win32crypt"
-        - "win32cryptcon"
-        - "win32event"
-        - "win32evtlog"
-        - "win32evtlogutil"
-        - "win32file"
-        - "win32gui"
-        - "win32gui_struct"
-        - "win32help"
-        - "win32inet"
-        - "win32inetcon"
-        - "win32job"
-        - "win32lz"
-        - "win32net"
-        - "win32netcon"
-        - "win32pdh"
-        - "win32pdhquery"
-        - "win32pdhutil"
-        - "win32pipe"
-        - "win32print"
-        - "win32process"
-        - "win32profile"
-        - "win32ras"
-        - "win32rcparser"
-        - "win32security"
-        - "win32service"
-        - "win32serviceutil"
-        - "win32timezone"
-        - "win32trace"
-        - "win32traceutil"
-        - "win32transaction"
-        - "win32ts"
-        - "win32ui"
-        - "win32uiole"
-        - "win32verstamp"
-        - "win32wnet"
-        - "winerror"
-        - "winioctlcon"
-        - "winnt"
-        - "winperf"
-        - "winxpgui"
-        - "winxptheme"
-        - "wrapt"
-        - "wsproto"
-        - "xdist"
-        - "xgboost"
-        - "xlrd"
-        - "xlsxwriter"
-        - "xmltodict"
-        - "xxhash"
-        - "yaml"
-        - "yamllint"
-        - "yarl"
-        - "yfinance"
-        - "youtube_transcript_api"
-        - "zeep"
-        - "zipp"
-        - "zmq"
-        - "zope"
-        - "zopfli"
-        - "zstandard"
+        [
+            "_argon2_cffi_bindings",
+            "_awscrt",
+            "_black_version",
+            "_brotli",
+            "_cffi_backend",
+            "_distutils_hack",
+            "_duckdb",
+            "_hypothesis_ftz_detector",
+            "_hypothesis_globals",
+            "_hypothesis_pytestplugin",
+            "_jpype",
+            "_multiprocess",
+            "_mysql_connector",
+            "_pillow_heif",
+            "_plotly_utils",
+            "_polars_runtime_32",
+            "_pyrsistent_version",
+            "_pytest",
+            "_ruamel_yaml",
+            "_sounddevice",
+            "_sounddevice_data",
+            "_soundfile",
+            "_soundfile_data",
+            "_time_machine",
+            "_watchdog_fsevents",
+            "_win32sysloader",
+            "_win32verstamp_pywin32ctypes",
+            "_winxptheme",
+            "_yaml",
+            "absl",
+            "accelerate",
+            "acp",
+            "adal",
+            "adbc_driver_duckdb",
+            "adodbapi",
+            "aenum",
+            "afxres",
+            "agate",
+            "agentplatform",
+            "aioboto3",
+            "aiobotocore",
+            "aiodns",
+            "aiofile",
+            "aiofiles",
+            "aiohappyeyeballs",
+            "aiohttp",
+            "aiohttp_retry",
+            "aioitertools",
+            "aiosignal",
+            "aiosqlite",
+            "airflow",
+            "alabaster",
+            "alembic",
+            "altair",
+            "amazon",
+            "amqp",
+            "annotated_doc",
+            "annotated_types",
+            "anthropic",
+            "antlr4",
+            "anyio",
+            "apiclient",
+            "appdirs",
+            "apscheduler",
+            "argcomplete",
+            "argon2",
+            "arrow",
+            "asgiref",
+            "asn1crypto",
+            "ast_serialize",
+            "astroid",
+            "asttokens",
+            "async_lru",
+            "async_timeout",
+            "asyncpg",
+            "attr",
+            "attrs",
+            "authlib",
+            "av",
+            "aws_cdk",
+            "aws_lambda_powertools",
+            "aws_requests_auth",
+            "aws_xray_sdk",
+            "awscli",
+            "awscrt",
+            "awswrangler",
+            "azure",
+            "babel",
+            "backoff",
+            "backports",
+            "bandit",
+            "basedpyright",
+            "bcrypt",
+            "beartype",
+            "bidict",
+            "billiard",
+            "bitarray",
+            "black",
+            "blackd",
+            "blake3",
+            "bleach",
+            "blib2to3",
+            "blinker",
+            "blis",
+            "boltons",
+            "boolean",
+            "boto3",
+            "botocore",
+            "bracex",
+            "brotli",
+            "bs4",
+            "bson",
+            "build",
+            "bytecode",
+            "c787785866c7b801238d__mypyc",
+            "cachecontrol",
+            "cached_property",
+            "cachetools",
+            "caio",
+            "catalogue",
+            "cattr",
+            "cattrs",
+            "cbor2",
+            "cchardet",
+            "celery",
+            "certifi",
+            "cffi",
+            "cfgv",
+            "chardet",
+            "charset_normalizer",
+            "claude_agent_sdk",
+            "cleo",
+            "click",
+            "click_didyoumean",
+            "click_option_group",
+            "click_plugins",
+            "click_repl",
+            "clickhouse_connect",
+            "cloudpathlib",
+            "cloudpickle",
+            "cobble",
+            "colorama",
+            "coloredlogs",
+            "colorlog",
+            "colors",
+            "comm",
+            "commctrl",
+            "confection",
+            "configargparse",
+            "confluent_kafka",
+            "contourpy",
+            "corsheaders",
+            "coverage",
+            "cpuinfo",
+            "cramjam",
+            "crashtest",
+            "crc32c",
+            "cron_descriptor",
+            "croniter",
+            "crypto",
+            "cryptodome",
+            "cryptography",
+            "cssselect",
+            "cssselect2",
+            "ctrf",
+            "cuda",
+            "curl_cffi",
+            "cv2",
+            "cycler",
+            "cyclonedx",
+            "cyclopts",
+            "cymem",
+            "cython",
+            "dacite",
+            "daff",
+            "dask",
+            "dask_expr",
+            "databricks",
+            "dataclasses_json",
+            "datadog",
+            "datadog_api_client",
+            "datamodel_code_generator",
+            "datasets",
+            "dateparser",
+            "dateparser_cli",
+            "dateparser_data",
+            "dateparser_scripts",
+            "dateutil",
+            "db_dtypes",
+            "dbt",
+            "dbt_common",
+            "dbt_extractor",
+            "dbtlabs",
+            "dde",
+            "ddtrace",
+            "debugpy",
+            "decorator",
+            "deepdiff",
+            "defusedxml",
+            "delta",
+            "demos",
+            "deprecated",
+            "deprecation",
+            "deptry",
+            "dev",
+            "diff_cover",
+            "dill",
+            "diskcache",
+            "distlib",
+            "distro",
+            "distutils",
+            "django",
+            "django_filters",
+            "dns",
+            "docker",
+            "docopt",
+            "docstring_parser",
+            "docutils",
+            "docx",
+            "dotenv",
+            "duckdb",
+            "dulwich",
+            "dunamai",
+            "durationpy",
+            "ecdsa",
+            "editables",
+            "einops",
+            "elastic_transport",
+            "elasticsearch",
+            "email_validator",
+            "emoji",
+            "engineio",
+            "entrypoints",
+            "envier",
+            "et_xmlfile",
+            "eval_type_backport",
+            "events",
+            "example",
+            "examples",
+            "exceptiongroup",
+            "execnet",
+            "executing",
+            "face",
+            "factory",
+            "faker",
+            "fakeredis",
+            "fastapi",
+            "fastapi_cli",
+            "fastapi_cloud_cli",
+            "fastar",
+            "fastavro",
+            "fastcore",
+            "fastjsonschema",
+            "fastmcp",
+            "fastspec",
+            "fastuuid",
+            "fb303",
+            "fd7dcdb10166ebd4db98__mypyc",
+            "feedparser",
+            "filelock",
+            "filetype",
+            "findpython",
+            "fire",
+            "firebase_admin",
+            "fitz",
+            "flake8",
+            "flask",
+            "flask_cors",
+            "flask_login",
+            "flatbuffers",
+            "flit_core",
+            "fonttools",
+            "fpdf",
+            "fqdn",
+            "freezegun",
+            "frozendict",
+            "frozenlist",
+            "fsspec",
+            "ftfy",
+            "functorch",
+            "future",
+            "gcsfs",
+            "genai_prices",
+            "genson",
+            "geopandas",
+            "gevent",
+            "ghapi",
+            "git",
+            "gitdb",
+            "github",
+            "glom",
+            "google",
+            "google_auth_httplib2",
+            "google_auth_oauthlib",
+            "google_crc32c",
+            "googleapiclient",
+            "gql",
+            "graphene",
+            "graphql",
+            "graphql_relay",
+            "graphviz",
+            "great_expectations",
+            "greenlet",
+            "gremlin_python",
+            "gridfs",
+            "griffe",
+            "grimp",
+            "groq",
+            "grpc",
+            "grpc_health",
+            "grpc_interceptor",
+            "grpc_status",
+            "grpc_tools",
+            "grpclib",
+            "gspread",
+            "gunicorn",
+            "h11",
+            "h2",
+            "h3",
+            "h5py",
+            "hatch_vcs",
+            "hatchling",
+            "hf_xet",
+            "hiredis",
+            "hive_metastore",
+            "holidays",
+            "hpack",
+            "html2text",
+            "html5lib",
+            "httpcore",
+            "httpcore2",
+            "httplib2",
+            "httptools",
+            "httpx",
+            "httpx2",
+            "httpx_sse",
+            "huey",
+            "huggingface_hub",
+            "humanfriendly",
+            "humanize",
+            "hvac",
+            "hyperframe",
+            "hyperlink",
+            "hypothesis",
+            "id",
+            "identify",
+            "idna",
+            "ijson",
+            "imageio",
+            "imageio_ffmpeg",
+            "imagesize",
+            "immutabledict",
+            "importlib_metadata",
+            "importlib_resources",
+            "importlinter",
+            "include",
+            "incremental",
+            "inflect",
+            "inflection",
+            "iniconfig",
+            "inquirerpy",
+            "installer",
+            "invoke",
+            "ipdb",
+            "ipykernel",
+            "ipykernel_launcher",
+            "ipython",
+            "ipython_pygments_lexers",
+            "ipywidgets",
+            "isapi",
+            "isodate",
+            "isoduration",
+            "isort",
+            "isympy",
+            "itsdangerous",
+            "jaraco",
+            "jedi",
+            "jeepney",
+            "jinja2",
+            "jira",
+            "jiter",
+            "jmespath",
+            "joblib",
+            "jose",
+            "joserfc",
+            "jpype",
+            "json5",
+            "json_repair",
+            "jsonconversion",
+            "jsonlines",
+            "jsonpatch",
+            "jsonpatch_cli",
+            "jsonpath",
+            "jsonpath_ng",
+            "jsonpickle",
+            "jsonpointer",
+            "jsonref",
+            "jsonschema",
+            "jsonschema_path",
+            "jsonschema_specifications",
+            "jupyter",
+            "jupyter_builder",
+            "jupyter_client",
+            "jupyter_core",
+            "jupyter_events",
+            "jupyter_lsp",
+            "jupyter_server",
+            "jupyter_server_terminals",
+            "jupyterlab",
+            "jupyterlab_pygments",
+            "jupyterlab_server",
+            "jupyterlab_widgets",
+            "jwcrypto",
+            "jwt",
+            "kafka",
+            "key_value",
+            "keyring",
+            "kiwisolver",
+            "kombu",
+            "kubernetes",
+            "langchain",
+            "langchain_anthropic",
+            "langchain_classic",
+            "langchain_community",
+            "langchain_core",
+            "langchain_google_genai",
+            "langchain_google_vertexai",
+            "langchain_openai",
+            "langchain_protocol",
+            "langchain_text_splitters",
+            "langcodes",
+            "langfuse",
+            "langgraph",
+            "langgraph_sdk",
+            "langsmith",
+            "lark",
+            "lazy_loader",
+            "lazy_object_proxy",
+            "ldap3",
+            "leather",
+            "levenshtein",
+            "lib",
+            "lib64",
+            "libcst",
+            "libfuturize",
+            "libpasteurize",
+            "librt",
+            "libs",
+            "license_expression",
+            "licensing",
+            "lightgbm",
+            "limits",
+            "linkify_it",
+            "litellm",
+            "llvmlite",
+            "locket",
+            "lockfile",
+            "logfire_api",
+            "loguru",
+            "lupa",
+            "lxml",
+            "lxml_html_clean",
+            "lz4",
+            "magic",
+            "magika",
+            "makefun",
+            "mako",
+            "mammoth",
+            "markdown",
+            "markdown_it",
+            "markdownify",
+            "markitdown",
+            "markupsafe",
+            "marshmallow",
+            "mashumaro",
+            "matplotlib",
+            "matplotlib_inline",
+            "maturin",
+            "maxminddb",
+            "mccabe",
+            "mcp",
+            "mcp_types",
+            "mdit_py_plugins",
+            "mdurl",
+            "mergedeep",
+            "mistralai",
+            "mistune",
+            "ml_dtypes",
+            "mlflow",
+            "mmapfile",
+            "mmh3",
+            "mmsystem",
+            "mock",
+            "modal",
+            "modal_docs",
+            "modal_proto",
+            "modal_version",
+            "more_itertools",
+            "moto",
+            "mpl_toolkits",
+            "mpmath",
+            "msal",
+            "msal_extensions",
+            "msgpack",
+            "msgspec",
+            "msrest",
+            "msrestazure",
+            "multidict",
+            "multipart",
+            "multiprocess",
+            "multitasking",
+            "murmurhash",
+            "mypy",
+            "mypy_boto3_s3",
+            "mypy_extensions",
+            "mypyc",
+            "mysql",
+            "mysqldb",
+            "nacl",
+            "narwhals",
+            "natsort",
+            "nbclient",
+            "nbconvert",
+            "nbformat",
+            "nest_asyncio",
+            "nest_asyncio2",
+            "netbios",
+            "networkx",
+            "nexusrpc",
+            "nh3",
+            "ninja",
+            "nltk",
+            "nodeenv",
+            "nodejs_wheel",
+            "notebook",
+            "notebook_shim",
+            "ntsecuritycon",
+            "numba",
+            "numpy",
+            "nvidia",
+            "oauth2client",
+            "oauthlib",
+            "odbc",
+            "olefile",
+            "olefileio_pl",
+            "omegaconf",
+            "onnxruntime",
+            "openai",
+            "openapi_pydantic",
+            "openapi_schema_validator",
+            "openapi_spec_validator",
+            "openpyxl",
+            "opensearchpy",
+            "openssl",
+            "opentelemetry",
+            "opt_einsum",
+            "optuna",
+            "oracledb",
+            "ordered_set",
+            "orderly_set",
+            "orjson",
+            "ormsgpack",
+            "oscrypto",
+            "oss2",
+            "outcome",
+            "overrides",
+            "packageurl",
+            "packaging",
+            "packaging_legacy_version",
+            "pandas",
+            "pandas_gbq",
+            "pandocfilters",
+            "papermill",
+            "paramiko",
+            "parse",
+            "parsedatetime",
+            "parso",
+            "partd",
+            "passlib",
+            "past",
+            "pasta",
+            "pathable",
+            "pathlib_abc",
+            "pathspec",
+            "pathvalidate",
+            "patsy",
+            "pbr",
+            "pbs_installer",
+            "pdf2image",
+            "pdfminer",
+            "pdfplumber",
+            "peewee",
+            "pendulum",
+            "perfmon",
+            "pexpect",
+            "pfzy",
+            "pg8000",
+            "pgvector",
+            "phonenumbers",
+            "pil",
+            "pillow_heif",
+            "pip",
+            "pip_api",
+            "pip_audit",
+            "pip_requirements_parser",
+            "pkginfo",
+            "platformdirs",
+            "playhouse",
+            "playwright",
+            "plotly",
+            "pluggy",
+            "ply",
+            "poetry",
+            "poetry_plugin_export",
+            "polars",
+            "portalocker",
+            "postgrest",
+            "posthog",
+            "pptx",
+            "pre_commit",
+            "prek",
+            "preshed",
+            "prettytable",
+            "progressbar",
+            "prometheus_client",
+            "prompt_toolkit",
+            "propcache",
+            "proto",
+            "proxytypes",
+            "psutil",
+            "psycopg",
+            "psycopg2",
+            "psycopg_binary",
+            "psycopg_pool",
+            "ptr",
+            "ptyprocess",
+            "pure_eval",
+            "puremagic",
+            "pvectorc",
+            "pwiz",
+            "py",
+            "py4j",
+            "py_partiql_parser",
+            "py_serializable",
+            "pyarrow",
+            "pyarrow_hotfix",
+            "pyasn1",
+            "pyasn1_modules",
+            "pyathena",
+            "pybase64",
+            "pybind11",
+            "pybreaker",
+            "pycares",
+            "pycodestyle",
+            "pycountry",
+            "pycparser",
+            "pydantic",
+            "pydantic_ai",
+            "pydantic_core",
+            "pydantic_extra_types",
+            "pydantic_graph",
+            "pydantic_settings",
+            "pydata_google_auth",
+            "pydeck",
+            "pydot",
+            "pydub",
+            "pydyf",
+            "pyee",
+            "pyflakes",
+            "pygments",
+            "pyiceberg",
+            "pylab",
+            "pylint",
+            "pymdownx",
+            "pymongo",
+            "pymssql",
+            "pymupdf",
+            "pymupdf4llm",
+            "pymysql",
+            "pynvml",
+            "pyodbc",
+            "pyotp",
+            "pyparsing",
+            "pypdf",
+            "pypdf2",
+            "pypdfium2",
+            "pypdfium2_cfg",
+            "pypdfium2_cli",
+            "pypdfium2_raw",
+            "pyperclip",
+            "pyphen",
+            "pyproj",
+            "pyproject_hooks",
+            "pyright",
+            "pyroaring",
+            "pyrsistent",
+            "pyspark",
+            "pytesseract",
+            "pytest",
+            "pytest_asyncio",
+            "pytest_cov",
+            "pytest_django",
+            "pytest_env",
+            "pytest_html",
+            "pytest_httpx",
+            "pytest_metadata",
+            "pytest_mock",
+            "pytest_randomly",
+            "pytest_rerunfailures",
+            "pytest_split",
+            "pytest_timeout",
+            "python_discovery",
+            "python_http_client",
+            "python_multipart",
+            "python_utils",
+            "pythoncom",
+            "pythonjsonlogger",
+            "pythonwin",
+            "pytimeparse",
+            "pytokens",
+            "pytz",
+            "pywin",
+            "pywin32_bootstrap",
+            "pywin32_system32",
+            "pywin32_testutil",
+            "pywintypes",
+            "pywt",
+            "pyximport",
+            "qrcode",
+            "questionary",
+            "rapidfuzz",
+            "rasutil",
+            "ratelimit",
+            "re2",
+            "readme_renderer",
+            "realtime",
+            "redis",
+            "redshift_connector",
+            "referencing",
+            "regcheck",
+            "regex",
+            "regutil",
+            "reportlab",
+            "requests",
+            "requests_aws4auth",
+            "requests_file",
+            "requests_mock",
+            "requests_oauthlib",
+            "requests_toolbelt",
+            "requirements",
+            "resolvelib",
+            "responses",
+            "respx",
+            "rest_framework",
+            "retry",
+            "retrying",
+            "rfc3339_validator",
+            "rfc3986",
+            "rfc3986_validator",
+            "rfc3987_syntax",
+            "rich",
+            "rich_argparse",
+            "rich_click",
+            "rich_rst",
+            "rich_toolkit",
+            "rignore",
+            "rpds",
+            "rsa",
+            "ruamel",
+            "ruff",
+            "s3fs",
+            "s3transfer",
+            "safetensors",
+            "schema",
+            "scipy",
+            "scramp",
+            "scripts",
+            "seaborn",
+            "secretstorage",
+            "selenium",
+            "semantic_version",
+            "semdep",
+            "semgrep",
+            "semver",
+            "send2trash",
+            "sendgrid",
+            "sentence_transformers",
+            "sentencepiece",
+            "sentry_sdk",
+            "service_identity",
+            "servicemanager",
+            "setproctitle",
+            "setuptools",
+            "setuptools_scm",
+            "shapely",
+            "shellingham",
+            "shortuuid",
+            "simple_salesforce",
+            "simple_websocket",
+            "simplejson",
+            "six",
+            "skimage",
+            "sklearn",
+            "skops",
+            "slack",
+            "slack_sdk",
+            "slowapi",
+            "slugify",
+            "smart_open",
+            "smmap",
+            "sniffio",
+            "snowballstemmer",
+            "snowflake",
+            "snowplow_tracker",
+            "socketio",
+            "socks",
+            "sockshandler",
+            "socksio",
+            "sortedcontainers",
+            "sounddevice",
+            "soundfile",
+            "soupsieve",
+            "spacy",
+            "spacy_legacy",
+            "spacy_loggers",
+            "sphinx",
+            "sphinxcontrib",
+            "spnego",
+            "sqlalchemy",
+            "sqlalchemy_utils",
+            "sqlglot",
+            "sqlmodel",
+            "sqlparse",
+            "srsly",
+            "sse_starlette",
+            "sshtunnel",
+            "sspi",
+            "sspicon",
+            "stack_data",
+            "starlette",
+            "statsmodels",
+            "stevedore",
+            "storage3",
+            "strands",
+            "streamlit",
+            "strenum",
+            "strictyaml",
+            "stripe",
+            "structlog",
+            "supabase",
+            "supabase_auth",
+            "supabase_functions",
+            "swebench",
+            "swifter",
+            "sympy",
+            "synchronicity",
+            "tabulate",
+            "tblib",
+            "temporalio",
+            "tenacity",
+            "tensorboard",
+            "termcolor",
+            "terminado",
+            "test",
+            "testcontainers",
+            "text_unidecode",
+            "texttable",
+            "textual",
+            "thinc",
+            "threadpoolctl",
+            "thrift",
+            "tifffile",
+            "tiktoken",
+            "tiktoken_ext",
+            "time_machine",
+            "timer",
+            "tinycss2",
+            "tinyhtml5",
+            "tld",
+            "tldextract",
+            "tlz",
+            "tokenizers",
+            "toml",
+            "tomli",
+            "tomli_w",
+            "tomlkit",
+            "tools",
+            "toolz",
+            "torch",
+            "torchgen",
+            "torchvision",
+            "tornado",
+            "tox",
+            "tqdm",
+            "traitlets",
+            "transformers",
+            "tree_sitter",
+            "tree_sitter_languages",
+            "trino",
+            "trio",
+            "trio_websocket",
+            "triton",
+            "trove_classifiers",
+            "truststore",
+            "twilio",
+            "twine",
+            "twisted",
+            "ty",
+            "typedload",
+            "typeguard",
+            "typer",
+            "typing_extensions",
+            "typing_inspect",
+            "typing_inspection",
+            "tzdata",
+            "tzlocal",
+            "ua_parser",
+            "ua_parser_builtins",
+            "uc_micro",
+            "ujson",
+            "uncalled_for",
+            "unidecode",
+            "unidiff",
+            "upath",
+            "uri_template",
+            "uritemplate",
+            "urllib3",
+            "uuid_utils",
+            "uv",
+            "uv_build",
+            "uvicorn",
+            "uvloop",
+            "validators",
+            "vcr",
+            "vcs_versioning",
+            "vertex_ray",
+            "vertexai",
+            "vine",
+            "virtualenv",
+            "vulture",
+            "wandb",
+            "wasabi",
+            "watchdog",
+            "watchfiles",
+            "watchtower",
+            "wcmatch",
+            "wcwidth",
+            "weasel",
+            "weasyprint",
+            "webcolors",
+            "webencodings",
+            "websocket",
+            "websockets",
+            "werkzeug",
+            "wheel",
+            "whitenoise",
+            "widgetsnbextension",
+            "win2kras",
+            "win32",
+            "win32api",
+            "win32clipboard",
+            "win32com",
+            "win32comext",
+            "win32con",
+            "win32console",
+            "win32cred",
+            "win32crypt",
+            "win32cryptcon",
+            "win32event",
+            "win32evtlog",
+            "win32evtlogutil",
+            "win32file",
+            "win32gui",
+            "win32gui_struct",
+            "win32help",
+            "win32inet",
+            "win32inetcon",
+            "win32job",
+            "win32lz",
+            "win32net",
+            "win32netcon",
+            "win32pdh",
+            "win32pdhquery",
+            "win32pdhutil",
+            "win32pipe",
+            "win32print",
+            "win32process",
+            "win32profile",
+            "win32ras",
+            "win32rcparser",
+            "win32security",
+            "win32service",
+            "win32serviceutil",
+            "win32timezone",
+            "win32trace",
+            "win32traceutil",
+            "win32transaction",
+            "win32ts",
+            "win32ui",
+            "win32uiole",
+            "win32verstamp",
+            "win32wnet",
+            "winerror",
+            "winioctlcon",
+            "winnt",
+            "winperf",
+            "winxpgui",
+            "winxptheme",
+            "wrapt",
+            "wsproto",
+            "xdist",
+            "xgboost",
+            "xlrd",
+            "xlsxwriter",
+            "xmltodict",
+            "xxhash",
+            "yaml",
+            "yamllint",
+            "yarl",
+            "yfinance",
+            "youtube_transcript_api",
+            "zeep",
+            "zipp",
+            "zmq",
+            "zope",
+            "zopfli",
+            "zstandard"
+        ]
