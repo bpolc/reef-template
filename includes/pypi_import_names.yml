@@ -1,7 +1,7 @@
 pypi_import_names:
     type: yaml
     when: false
-    default:
+    default: |
         - "_argon2_cffi_bindings"
         - "_awscrt"
         - "_black_version"

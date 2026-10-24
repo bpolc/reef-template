@@ -1,7 +1,7 @@
 python_keywords:
     type: yaml
     when: false
-    default:
+    default: |
         - "and"
         - "as"
         - "assert"
