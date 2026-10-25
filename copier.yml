@@ -70,7 +70,9 @@ author_email:
 
 licenses:
     type: str
-    help: Project license(s)
+    help: |-
+        Project license(s)
+        https://choosealicense.com/licenses/
     multiselect: true
     default: []
     choices:
