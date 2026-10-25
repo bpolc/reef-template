@@ -36,33 +36,37 @@ module:
         {% elif module in ['sitecustomize', 'usercustomize'] %}
         Must not be a Python startup hook
         {% elif module in stdlib_module_names %}
-        Must not be a Python standard-library module
+        Must not be a Python standard library module
         {% elif module | regex_search('(?i)^(?:con|prn|aux|nul|com[1-9]|lpt[1-9])\\Z') %}
         Must not be a reserved Windows device name
         {% elif module == 'tests' %}
-        Must not use the reserved directory name "tests"
+        "tests" is a reserved name
         {% elif not _copier_conf.overwrite and module | lower in pypi_import_names %}
         Must not be a popular PyPI import name
         {% endif %}
 
 description:
     type: str
-    help: Short project description (one line)
+    help: Short project description (optional)
     default: ""
     validator: >-
         {% if description | regex_search('[\r\n]') %}
-        Must not contain newlines
+        Must fit in one line
         {% endif %}
 
 author_name:
     type: str
-    help: Author name
+    help: Author name (optional)
     default: ""
 
 author_email:
     type: str
-    help: Author email
+    help: Author email (optional)
     default: ""
+    validator: >-
+        {% if author_email and not (author_email | regex_search('^[^\\s@]+@[^\\s@]+\\.[^\\s@]+\\Z')) %}
+        Invalid email address
+        {% endif %}
 
 licenses:
     type: str
@@ -113,5 +117,5 @@ line_width:
     default: 100
     validator: |-
         {% if line_width < 40 or line_width > 320 %}
-        Line width must be between 40 and 320
+        Must be between 40 and 320
         {% endif %}
