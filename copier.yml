@@ -25,7 +25,7 @@ name:
 module:
     type: str
     help: Python import name (`src/<module>/`)
-    default: "{{ name | lower | regex_replace('[^a-z0-9]+', '_') }}"
+    default: "{{ name | lower | regex_replace('[^a-z0-9]+', '_') | regex_replace('^(?=[0-9])', '_') }}"
     validator: >-
         {% if not (module | regex_search('^[a-z_][a-z0-9_]*\\Z')) %}
         Must be a lowercase Python identifier (ASCII)
