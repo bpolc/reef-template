@@ -71,7 +71,7 @@ author_email:
 licenses:
     type: str
     help: |-
-        Project license(s)
+        Project license(s) (optional)
         https://choosealicense.com/licenses/
     multiselect: true
     default: []
@@ -115,7 +115,7 @@ task_runner:
 
 line_width:
     type: int
-    help: Maximum line width for formatters
+    help: Preferred line width for formatters
     default: 100
     validator: |-
         {% if line_width < 40 or line_width > 320 %}
